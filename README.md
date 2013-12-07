@@ -71,6 +71,13 @@ Let will examine the case when object has two features (eg the first letter and 
 We have a total of n names. And we need to take part names to learn, and another part, in order to test the effectiveness (how well we define - classify).
 Example. We can divide a list of names by half. The first part of training - a training set, and the second part of the test - a test set. Intuitively, it is not clear exactly why on half? Let us conduct experimentation and look at the charts that we succeed.
 
+### In order to be sure, I performed 200 times (from my point of view, it is sufficient for this task). A set of names in each of experiment were mixed.
+
+
+## The testing set includes of all the names
+In other words, a set of training set (in this case, we increase it) and test set constant (full list of names.)
+
+The x-axis, are **experiments** (200 pieces), y-axis y - **accuracy** (ie how many replies from all were correct. The ideal - 100%).
 
 ### train_set.length == 1
 ![1](https://raw.github.com/slon1024/naive_bayes_classifier/master/chart/test_to0_all.png)
@@ -96,13 +103,29 @@ Example. We can divide a list of names by half. The first part of training - a t
 ### train_set.length == 1000
 ![1000](https://raw.github.com/slon1024/naive_bayes_classifier/master/chart/test_to1000_all.png)
 
+## The testing set includes what is not included in the training set
+
+In other words, a list of names of (n), is divided into two groups for the training set and testing set.
 
 
+### train_set.length == 1
+![1](https://raw.github.com/slon1024/naive_bayes_classifier/master/chart/test_to0_from0.png)
 
+### train_set.length == 5
+![5](https://raw.github.com/slon1024/naive_bayes_classifier/master/chart/test_to5_from5.png)
 
+### train_set.length == 10
+![10](https://raw.github.com/slon1024/naive_bayes_classifier/master/chart/test_to10_from10.png)
 
+### train_set.length == 50
+![50](https://raw.github.com/slon1024/naive_bayes_classifier/master/chart/test_to50_from50.png)
 
+### train_set.length == 300
+![300](https://raw.github.com/slon1024/naive_bayes_classifier/master/chart/test_to300_from300.png)
 
+### train_set.length == 500
+![500](https://raw.github.com/slon1024/naive_bayes_classifier/master/chart/test_to500_from500.png)
 
-
+### train_set.length == 1000
+![1000](https://raw.github.com/slon1024/naive_bayes_classifier/master/chart/test_to1000_from1000.png)
 
