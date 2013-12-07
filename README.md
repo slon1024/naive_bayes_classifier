@@ -35,3 +35,17 @@ Let us approximate the mathematical world to the intuitive world (what can be se
 Each name - it is an object. Which has certain features. For instance, those features can be: the **first letter** of the name, the **last letter** of the name, name **length**, etc.
 
 Each name can be **male** or **female** (this is our classifiers, there'a two in this case: 'male' or 'female').
+
+To learn how to determine the gender of the name belongs to, we needed data on which we learn. Data it's n-th number of rows (records), each row will have two values **name** and **gender**. For example:
+
+| Name    | Gender|
+| --------|------:|
+| Abdon   | m     |
+| Abel    | m     |
+| Ada     | f     |
+
+
+Let the list of names, which is n. Number of classes to which it objects attribute m (recall in this case two classes: male and female). Then P (C) is equal to:
+
+![alt tag](http://mathurl.com/lb8j58c.png)
+
