@@ -25,7 +25,7 @@ O (object) consists of features so that P(O|C) is equal to:
 
 ![final formula](http://mathurl.com/mle49sz.png)
 
-## What does this mean in practice
+## What does this mean in practice?
 In order to understand the mathematical formulas, let's solve the puzzle. Suppose we have a list of names, and we need to determine the base name is it male or female. For example, **Adam** - it's a **male** name, and **Julia** - a **female** name. 
 
 
@@ -53,9 +53,8 @@ We assume that our *object* (name) has two *features* (ie, each name has two fea
 ###Example 
 We have **n** names (of which *male* names - **k**, and *female* - **l**, ie, **n = k + l**), and also we know about **r** when in the male name was the first letter **A**. Then the probability that name is male which begins with the letter "A" is equal to:
 
-![P(f1|c)](http://mathurl.com/kla3qpb.png)
-
-where  
+![P(f1|c)](http://mathurl.com/kla3qpb.png)  
+*where*  
 **f1** - the first letter of the object (feature)  
 **с** - the classifier "m"  (ie, that the name is male)  
 **r** - the number of times the first letter in the male names was "A"  
@@ -64,10 +63,46 @@ where
 
 Let will examine the case when object has two features (eg the first letter and the last letter), then the total probability that the name is a male will be equal to:
 
-![P(O|c)](http://mathurl.com/lk8ygqo.png)
-
-where  
+![P(O|c)](http://mathurl.com/lk8ygqo.png)  
+*where*  
 **s** - how many times the last letter (in the name of "Adam" this "m") appeared among the male names.
+
+## Training and testing
+We have a total of n names. And we need to take part names to learn, and another part, in order to test the effectiveness (how well we define - classify).
+Example. We can divide a list of names by half. The first part of training - a training set, and the second part of the test - a test set. Intuitively, it is not clear exactly why on half? Let us conduct experimentation and look at the charts that we succeed.
+
+
+### train_set.length == 1
+![1](https://raw.github.com/slon1024/naive_bayes_classifier/master/chart/test_to0_all.png)
+
+### train_set.length == 5
+![5](https://raw.github.com/slon1024/naive_bayes_classifier/master/chart/test_to5_all.png)
+
+### train_set.length == 10
+![10](https://raw.github.com/slon1024/naive_bayes_classifier/master/chart/test_to10_all.png)
+
+### train_set.length == 50
+![50](https://raw.github.com/slon1024/naive_bayes_classifier/master/chart/test_to50_all.png)
+
+### train_set.length == 100
+![100](https://raw.github.com/slon1024/naive_bayes_classifier/master/chart/test_to100_all.png)
+
+### train_set.length == 300
+![300](https://raw.github.com/slon1024/naive_bayes_classifier/master/chart/test_to300_all.png)
+
+### train_set.length == 500
+![500](https://raw.github.com/slon1024/naive_bayes_classifier/master/chart/test_to500_all.png)
+
+### train_set.length == 1000
+![1000](https://raw.github.com/slon1024/naive_bayes_classifier/master/chart/test_to1000_all.png)
+
+
+
+
+
+
+
+
 
 
 
