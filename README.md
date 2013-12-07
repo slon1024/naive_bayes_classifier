@@ -138,3 +138,32 @@ What evident in all the graphs that the quality of sample size increases, ie, we
 ## Final chart
 Let's build another chart, which was quite difficult to compute (long), but it will show us in detail both by decreasing the number of rising quality (accuracy).
 ![final chart](https://raw.github.com/slon1024/naive_bayes_classifier/master/chart/test_avg_from0_to1500.png)
+
+
+The graph consists of **1501** points. Each of which computed **200** times and took the average of them (each experiment names mixed up).
+
+Let's look to the graph (how to change the accuracy of these intervals). I propose to divide it into seven intervals.
+
+| interval | from   | to     | diff   |
+| ---------|:------:|:------:|:-------|
+| 0..50    | 49.57%   67.06%   17.49% |
+| 50..100  | 67.06%   77.85%   10.79% |
+| 100..200 | 77.85%   86.40%   8.55%  |
+| 200..300 | 86.40%   89.55%   3.15%  |
+| 300..400 | 89.55%   90.94%   1.39%  |
+| 400..600 | 90.94%   92.31%   1.37%  |
+| 600..1500| 92.31%   93.68%   1.37%  |
+
+The table is very clear that in the interval from 0 to 200, the accuracy was improved by **36.83%** (reaching 86.40%), and the interval from 200 to 1500 improved to **7.28%** (reaching 93.68%).
+
+
+Maximum accuracy which managed to get this: **93.97**% *(which appeared at 1496)*. 
+
+
+
+
+
+
+
+
+
