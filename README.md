@@ -161,10 +161,29 @@ The table is very clear that in the interval from 0 to 200, the accuracy was imp
 Maximum accuracy which managed to get this: **93.97**% *(which appeared at 1496)*. 
 
 
+You can see this chart in more detail. I divided it into three intervals: from 0 to 200, from 200 to 1500 and 1000 to 1500.
+
+### from 0 to 200
+![0-200](https://raw.github.com/slon1024/naive_bayes_classifier/master/chart/test_avg_from0_to200.png)
+
+### from 200 to 1500
+![200-1500](https://raw.github.com/slon1024/naive_bayes_classifier/master/chart/test_avg_from200_to1500.png)
+
+### from 1000 to 1500
+![1000-1500](https://raw.github.com/slon1024/naive_bayes_classifier/master/chart/test_avg_from1000_to1500.png)
+
+
+At the last (from 1000 to 1500), though it seems "hard" oscillate, the oscillation amplitude is very small (on average about 0.2%)
 
 
 
+## Conclusion
+
+In order to determine the name of the male or female with an accuracy greater than 90% is enough to make the following:  
+1. Each name will have three feature (the first letter in the middle of the beech and the last letter ).  
+2. Need at least 200 names to be close to 90% accuracy.  
+3. But even if the names will be much more difficult to be a very "hard" to improve significantly the result (in our case it was a maximum of 3%). So if 90% is not enough, you need also use additional another method.
 
 
-
+**Naive Bayes classifier**, despite its simplicity, but  it's very practical . At first glance (based on theory) , it's very difficult to imagine that knowing only some of the letters in the name, it can be argued ( with a fairly high degree of accuracy ) it is male or female. But is it really this classifier so naive? If longer think about it then intuitively begin to understand why this happens, and then everything falls into place.
 

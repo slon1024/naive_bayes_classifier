@@ -58,7 +58,7 @@ var svg = d3.select("body").append("svg")
   .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-d3.tsv("data/test_avg_from0_to1500.tsv", function(error, data) {
+d3.tsv("data/test_avg_from1000_to1500.tsv", function(error, data) {
   data.forEach(function(d) {
     d.interval =  +d.interval;
     d.accurancy = +d.accurancy;
