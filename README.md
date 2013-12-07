@@ -4,31 +4,30 @@ I'll show an example of [Naive Bayes classifier](http://en.wikipedia.org/wiki/Na
 
 ## A bit of theory
 
-![alt tag](http://mathurl.com/43ldwqj.png)
+![P(C|O)](http://mathurl.com/43ldwqj.png)
 
-Find P (C | O) can use the formula Bayes.
+Find P(C|O) can use the formula Bayes.
 
-![alt tag](http://mathurl.com/42khnaa.png)
+![Bayes](http://mathurl.com/42khnaa.png)
 
 I want to draw your attention to the fact that we are looking for the maximum, so the denominator can be removed (it will just be a constant value, which essentially does not change anything). OK, then we get the following (simplified) formula.
 
-![alt tag](http://mathurl.com/leacfcx.png)
+![simplified](http://mathurl.com/leacfcx.png)
 
 
-Where P(O|C) is
+O (object) consists of features so that P(O|C) is equal to:
 
-![alt tag](http://mathurl.com/ovdb6dz.png)
+![P(O|C)](http://mathurl.com/mexxzzc.png)
 
 
 
-The final formula will be:
+### The final formula will be:
 
-![alt tag](http://mathurl.com/3g3cwb9.png)
+![final formula](http://mathurl.com/mle49sz.png)
 
 ## What does this mean in practice
-In order to understand the mathematical formulas, let's solve the puzzle. Suppose we have a list of names, and we need to determine the base name is it male or female. For example, **Jan** - it's a **male** name, and **Karolina** - a **female** name. 
+In order to understand the mathematical formulas, let's solve the puzzle. Suppose we have a list of names, and we need to determine the base name is it male or female. For example, **Adam** - it's a **male** name, and **Julia** - a **female** name. 
 
-How to implement it?
 
 Let us approximate the mathematical world to the intuitive world (what can be seen, not even knowing the difficult mathematics formulas).
 
@@ -45,7 +44,30 @@ To learn how to determine the gender of the name belongs to, we needed data on w
 | Ada     | f     |
 
 
-Let the list of names, which is n. Number of classes to which it objects attribute m (recall in this case two classes: male and female). Then P (C) is equal to:
+Let the list of names, which is n. Number of classes to which it objects attribute m (recall in this case two classes: male and female). Then P(C) is equal to:
 
-![alt tag](http://mathurl.com/lb8j58c.png)
+![P(C)](http://mathurl.com/lb8j58c.png)
+
+We assume that our *object* (name) has two *features* (ie, each name has two features), namely: the first letter and last letter. For example, "**Adam**", has two features: "**A**" (*first letter*) and "**m**" (*last letter*). Furthermore, we know that this *object* ("Adam") is a **male** name (*classifier* "m" - male). Knowing how often a male name has first letter is "A", we can assume that if it is a male or female name. Determine the name (male or female) only one letter is very difficult (for example, there are many names as female and male, which begin with the letter "A"). Therefore, we look at another feature (the last letter), in practice this is already quite enough (charts below).
+
+###Example 
+We have **n** names (of which *male* names - **k**, and *female* - **l**, ie, **n = k + l**), and also we know about **r** when in the male name was the first letter **A**. Then the probability that name is male which begins with the letter "A" is equal to:
+
+![P(f1|c)](http://mathurl.com/kla3qpb.png)
+
+where  
+**f1** - the first letter of the object (feature)  
+**с** - the classifier "m"  (ie, that the name is male)  
+**r** - the number of times the first letter in the male names was "A"  
+**k** - how many were male names
+
+
+Let will examine the case when object has two features (eg the first letter and the last letter), then the total probability that the name is a male will be equal to:
+
+![P(O|c)](http://mathurl.com/lk8ygqo.png)
+
+where  
+**s** - how many times the last letter (in the name of "Adam" this "m") appeared among the male names.
+
+
 
