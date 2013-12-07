@@ -33,18 +33,18 @@ end
 begin
     items = get_items('source/polish_names.txt')
     f = File.open("data/test_avg_from0_to1500.tsv", "a")#_to#{interval}_from#{interval}
-    f.write("interval\taccurancy\n")
+    f.write("interval\accuracy\n")
 
     gen_a(0,1500).each do |interval|
-        accurancy = 0.0
+        accuracy = 0.0
         count_attempt = 200
         
         gen_a(1, count_attempt).each_with_index do |attempt, index|
-            accurancy += experiment(interval, items.shuffle)            
+            accuracy += experiment(interval, items.shuffle)            
         end
-        accurancy /= count_attempt
+        accuracy /= count_attempt
 
-        f.write("#{interval}\t#{accurancy}\n")
+        f.write("#{interval}\t#{accuracy}\n")
     end
 ensure
     f.close()
