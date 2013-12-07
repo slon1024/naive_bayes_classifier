@@ -26,7 +26,7 @@ O (object) consists of features so that P(O|C) is equal to:
 ![final formula](http://mathurl.com/mle49sz.png)
 
 ## What does this mean in practice?
-In order to understand the mathematical formulas, let's solve the puzzle. Suppose we have a list of names, and we need to determine the base name is it male or female. For example, **Adam** - it's a **male** name, and **Julia** - a **female** name. 
+In order to understand the mathematical formulas, let's solve the puzzle. Suppose we have a list of names, and we need to determine the name is it male or female. For example, **Adam** - it's a **male** name, and **Julia** - a **female** name. 
 
 
 Let us approximate the mathematical world to the intuitive world (what can be seen, not even knowing the difficult mathematics formulas).
@@ -71,13 +71,26 @@ Let will examine the case when object has two features (eg the first letter and 
 We have a total of n names. And we need to take part names to learn, and another part, in order to test the effectiveness (how well we define - classify).
 Example. We can divide a list of names by half. The first part of training - a training set, and the second part of the test - a test set. Intuitively, it is not clear exactly why on half? Let us conduct experimentation and look at the charts that we succeed.
 
-### In order to be sure, I performed 200 times (from my point of view, it is sufficient for this task). A set of names in each of experiment were mixed.
+#### In order to be sure, I performed 200 times (from my point of view, it is sufficient for this task). A set of names in each of experiment were mixed.
+
+## Features
+Let's play with the fact that both features affect the accuracy. Suppose features of object: first letter or **first, middle and last letters**. The X-axis successive steps, the Y-axis accuracy of the result.
+Training set was equal to **500 names**.
+
+### First letter
+![first letter](https://raw.github.com/slon1024/naive_bayes_classifier/master/chart/test_letter_first.png)
+
+
+### First, middle and last letters
+![first, middle and last letters](https://raw.github.com/slon1024/naive_bayes_classifier/master/chart/test_letter_first_middle_last.png)
+
+In further calculations, I'll use the fact that each name has three features (first, middle and last letters).
 
 
 ## The testing set includes of all the names
 In other words, a set of training set (in this case, we increase it) and test set constant (full list of names.)
 
-The x-axis, are **experiments** (200 pieces), y-axis - **accuracy** (ie how many replies from all were correct. The ideal - 100%).
+The x-axis, are **experiments** (200 times), y-axis - **accuracy** (ie how many replies from all were correct. The ideal - 100%).
 
 ### train_set.length == 1
 ![1](https://raw.github.com/slon1024/naive_bayes_classifier/master/chart/test_to0_all.png)
@@ -180,10 +193,10 @@ At the last (from 1000 to 1500), though it seems "hard" oscillate, the oscillati
 ## Conclusion
 
 In order to determine the name of the male or female with an accuracy greater than 90% is enough to make the following:  
-1. Each name will have three feature (the first letter in the middle of the beech and the last letter ).  
+1. Each name will have three feature (the first letter in the middle of the beech and the last letter).  
 2. Need at least 200 names to be close to 90% accuracy.  
 3. But even if the names will be much more difficult to be a very "hard" to improve significantly the result (in our case it was a maximum of 3%). So if 90% is not enough, you need also use additional another method.
 
 
-**Naive Bayes classifier**, despite its simplicity, but  it's very practical . At first glance (based on theory) , it's very difficult to imagine that knowing only some of the letters in the name, it can be argued ( with a fairly high degree of accuracy ) it is male or female. But is it really this classifier so naive? If longer think about it then intuitively begin to understand why this happens, and then everything falls into place.
+**Naive Bayes classifier**, despite its simplicity, but  it's very practical . At first glance (based on theory), it's very difficult to imagine that knowing only some of the letters in the name, it can be argued ( with a fairly high degree of accuracy) it is male or female. *But is it really this classifier so naive?* If longer think about it then intuitively begin to understand why this happens, and then everything falls into place.
 
