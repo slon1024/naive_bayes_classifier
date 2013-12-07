@@ -77,7 +77,7 @@ Example. We can divide a list of names by half. The first part of training - a t
 ## The testing set includes of all the names
 In other words, a set of training set (in this case, we increase it) and test set constant (full list of names.)
 
-The x-axis, are **experiments** (200 pieces), y-axis y - **accuracy** (ie how many replies from all were correct. The ideal - 100%).
+The x-axis, are **experiments** (200 pieces), y-axis - **accuracy** (ie how many replies from all were correct. The ideal - 100%).
 
 ### train_set.length == 1
 ![1](https://raw.github.com/slon1024/naive_bayes_classifier/master/chart/test_to0_all.png)
@@ -129,3 +129,12 @@ In other words, a list of names of (n), is divided into two groups for the train
 ### train_set.length == 1000
 ![1000](https://raw.github.com/slon1024/naive_bayes_classifier/master/chart/test_to1000_from1000.png)
 
+
+## Some conclusions
+Set of names (population) was in **1712**. In the case when training set included **1000** names, names of testing was **712** (41.59%). It is also *enough* quantity to be able to trust him.
+
+What evident in all the graphs that the quality of sample size increases, ie, we have not yet reached the level [*overfitting*](http://en.wikipedia.org/wiki/Overfitting).
+
+## Final chart
+Let's build another chart, which was quite difficult to compute (long), but it will show us in detail both by decreasing the number of rising quality (accuracy).
+![final chart](https://raw.github.com/slon1024/naive_bayes_classifier/master/chart/test_avg_from0_to1500.png)
