@@ -50,7 +50,7 @@ var yAxis = d3.svg.axis()
 
 var line = d3.svg.line()
     .x(function(d) { return x(d.interval); })
-    .y(function(d) { return y(d.accurancy); });
+    .y(function(d) { return y(d.accuracy); });
 
 var svg = d3.select("body").append("svg")
     .attr("width", width + margin.left + margin.right)
@@ -61,11 +61,11 @@ var svg = d3.select("body").append("svg")
 d3.tsv("data/test_avg_from1000_to1500.tsv", function(error, data) {
   data.forEach(function(d) {
     d.interval =  +d.interval;
-    d.accurancy = +d.accurancy;
+    d.accuracy = +d.accuracy;
   });
 
   x.domain(d3.extent(data, function(d) { return d.interval; }));
-  y.domain(d3.extent(data, function(d) { return d.accurancy; }));
+  y.domain(d3.extent(data, function(d) { return d.accuracy; }));
 
   svg.append("g")
       .attr("class", "x axis")
@@ -84,7 +84,7 @@ d3.tsv("data/test_avg_from1000_to1500.tsv", function(error, data) {
       .attr("y", -50)
       .attr("dy", ".71em")
       .style("text-anchor", "end")
-      .text("Accurancy")
+      .text("Accuracy")
       ;
 
   svg.append("path")

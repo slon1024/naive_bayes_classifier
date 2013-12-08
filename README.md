@@ -31,9 +31,9 @@ In order to understand the mathematical formulas, let's solve the puzzle. Suppos
 
 Let us approximate the mathematical world to the intuitive world (what can be seen, not even knowing the difficult mathematics formulas).
 
-Each name - it is an object. Which has certain features. For instance, those features can be: the **first letter** of the name, the **last letter** of the name, name **length**, etc.
+Each name - it's an object. Which has certain features. For instance, those features can be: the **first letter** of the name, the **last letter** of the name, name **length**, etc.
 
-Each name can be **male** or **female** (this is our classifiers, there'a two in this case: 'male' or 'female').
+Each name can be **male** or **female** (this is our classifiers, there're two in this case: 'male' and 'female').
 
 To learn how to determine the gender of the name belongs to, we needed data on which we learn. Data it's n-th number of rows (records), each row will have two values **name** and **gender**. For example:
 
@@ -48,7 +48,7 @@ Let the list of names, which is n. Number of classes to which it objects attribu
 
 ![P(C)](http://mathurl.com/lb8j58c.png)
 
-We assume that our *object* (name) has two *features* (ie, each name has two features), namely: the first letter and last letter. For example, "**Adam**", has two features: "**A**" (*first letter*) and "**m**" (*last letter*). Furthermore, we know that this *object* ("Adam") is a **male** name (*classifier* "m" - male). Knowing how often a male name has first letter is "A", we can assume that if it is a male or female name. Determine the name (male or female) only one letter is very difficult (for example, there are many names as female and male, which begin with the letter "A"). Therefore, we look at another feature (the last letter), in practice this is already quite enough (charts below).
+We assume that our *object* (name) has two *features* (ie, each name has two features), namely: the first letter and last letter. For example, "**Adam**", has two features: "**A**" (*first letter*) and "**m**" (*last letter*). Furthermore, we know that this *object* ("Adam") is a **male** name (*classifier* "m" - male). Knowing how often a male name has first letter is "A", we can assume that if it is a male or female name. Determine the name (male or female) only one letter is very difficult (for example, there're many names as female and male, which begin with the letter "A"). Therefore, we look at another feature (the last letter), in practice this is already quite enough (charts below).
 
 ###Example 
 We have **n** names (of which *male* names - **k**, and *female* - **l**, ie, **n = k + l**), and also we know about **r** when in the male name was the first letter **A**. Then the probability that name is male which begins with the letter "A" is equal to:
@@ -74,7 +74,7 @@ Example. We can divide a list of names by half. The first part of training - a t
 #### In order to be sure, I performed 200 times (from my point of view, it is sufficient for this task). A set of names in each of experiment were mixed.
 
 ## Features
-Let's play with the fact that both features affect the accuracy. Suppose features of object: first letter or **first, middle and last letters**. The X-axis successive steps, the Y-axis accuracy of the result.
+Let's play with the fact that count of features affect the accuracy. Suppose features of object: first letter or **first, middle and last letters**. The X-axis successive steps, the Y-axis accuracy of the result.
 Training set was equal to **500 names**.
 
 ### First letter
@@ -146,10 +146,10 @@ In other words, a list of names of (n), is divided into two groups for the train
 ## Some conclusions
 Set of names (population) was in **1712**. In the case when training set included **1000** names, names of testing was **712** (41.59%). It is also *enough* quantity to be able to trust him.
 
-What evident in all the graphs that the quality of sample size increases, ie, we have not yet reached the level [*overfitting*](http://en.wikipedia.org/wiki/Overfitting).
+What is obvious in all the graphs that quality improves with by increasing the sample size, ie, we have not yet reached the level [*overfitting*](http://en.wikipedia.org/wiki/Overfitting).
 
 ## Final chart
-Let's build another chart, which was quite difficult to compute (long), but it will show us in detail both by decreasing the number of rising quality (accuracy).
+Let's build another chart, which was quite difficult to compute (long), but it shows us in detail how by increasing sampling improves the quality (accuracy) of the forecast.
 ![final chart](https://raw.github.com/slon1024/naive_bayes_classifier/master/chart/test_avg_from0_to1500.png)
 
 
@@ -168,7 +168,7 @@ Let's look to the graph (how to change the accuracy of these intervals). I propo
 | 600..1500| 92.31% | 93.68% | 1.37%  |
 
 
-The table is very clear that in the interval from 0 to 200, the accuracy was improved by **36.83%** (reaching 86.40%), and the interval from 200 to 1500 improved to **7.28%** (reaching 93.68%).
+In the table it is clear that in the range from 0 to 200, the accuracy is changed (improved) is very fast and has been improved **36.83%** (reaching 86.40%), and the interval from 200 to 1500 improved **7.28%** (reaching 93.68%).
 
 
 Maximum accuracy which managed to get this: **93.97**% *(which appeared at 1496)*. 
@@ -186,8 +186,7 @@ You can see this chart in more detail. I divided it into three intervals: from 0
 ![1000-1500](https://raw.github.com/slon1024/naive_bayes_classifier/master/chart/test_avg_from1000_to1500.png)
 
 
-At the last (from 1000 to 1500), though it seems "hard" oscillate, the oscillation amplitude is very small (on average about 0.2%)
-
+At the last (from 1000 to 1500), though it seems "hard" oscillate, the oscillation amplitude is very small (on average about 0.3%)
 
 
 ## Conclusion
@@ -199,4 +198,3 @@ In order to determine the name of the male or female with an accuracy greater th
 
 
 **Naive Bayes classifier**, despite its simplicity, but  it's very practical . At first glance (based on theory), it's very difficult to imagine that knowing only some of the letters in the name, it can be argued ( with a fairly high degree of accuracy) it is male or female. *But is it really this classifier so naive?* If longer think about it then intuitively begin to understand why this happens, and then everything falls into place.
-

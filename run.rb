@@ -33,7 +33,7 @@ end
 begin
     items = get_items('source/polish_names.txt')
     f = File.open("data/test_avg_from0_to1500.tsv", "a")#_to#{interval}_from#{interval}
-    f.write("interval\accuracy\n")
+    f.write("interval\taccuracy\n")
 
     gen_a(0,1500).each do |interval|
         accuracy = 0.0
