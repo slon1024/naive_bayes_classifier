@@ -17,7 +17,7 @@ I want to draw your attention to the fact that we are looking for the maximum, s
 
 O (object) consists of features so that P(O|C) is equal to:
 
-![P(O|C)](http://mathurl.com/mexxzzc.png)
+![P(O|C)](http://mathurl.com/ludhw7s.png)
 
 
 
