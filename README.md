@@ -4,24 +4,23 @@ I'll show an example of [Naive Bayes classifier](http://en.wikipedia.org/wiki/Na
 
 ## A bit of theory
 
-![P(C|O)](http://mathurl.com/os8zvg9.png)
+![P(C|O)](http://mathurl.com/os8zvg9.png)  
 Find P(C|O) can use the formula Bayes.
 
-![Bayes](http://mathurl.com/phvfsjv.png)
+![Bayes](http://mathurl.com/phvfsjv.png)  
 I want to draw your attention to the fact that we are looking for the maximum, so the denominator can be removed (it will just be a constant value, which essentially does not change anything). OK, then we get the following (simplified) formula.
 
-![simplified](http://mathurl.com/leacfcx.png)
+![simplified](http://mathurl.com/poj35k6.png)  
 
 
 O (object) consists of features so that P(O|C) is equal to:
-
-![P(O|C)](http://mathurl.com/ludhw7s.png)
+![P(O|C)](http://mathurl.com/p33sevu.png)
 
 
 
 ### The final formula will be:
 
-![final formula](http://mathurl.com/mle49sz.png)
+![final formula](http://mathurl.com/owqlvam.png)
 
 ## What does this mean in practice?
 In order to understand the mathematical formulas, let's solve the puzzle. Suppose we have a list of names, and we need to determine the name is it male or female. For example, **Adam** - it's a **male** name, and **Julia** - a **female** name. 
