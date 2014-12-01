@@ -1,15 +1,13 @@
 # Naive Bayes classifier
 
-I'll show an example of [Naive Bayes classifier](http://en.wikipedia.org/wiki/Naive_Bayes_classifier) (NBC). From my point of view there is a lot of theories on this subject, but hard enough to find practical examples that show that NBC works in real life (and does it well enough).
+I'll show an example of [Naive Bayes classifier](http://en.wikipedia.org/wiki/Naive_Bayes_classifier) (NBC). 
 
 ## A bit of theory
 
-![P(C|O)](http://mathurl.com/43ldwqj.png)
-
+![P(C|O)](http://mathurl.com/os8zvg9.png)
 Find P(C|O) can use the formula Bayes.
 
-![Bayes](http://mathurl.com/42khnaa.png)
-
+![Bayes](http://mathurl.com/phvfsjv.png)
 I want to draw your attention to the fact that we are looking for the maximum, so the denominator can be removed (it will just be a constant value, which essentially does not change anything). OK, then we get the following (simplified) formula.
 
 ![simplified](http://mathurl.com/leacfcx.png)
